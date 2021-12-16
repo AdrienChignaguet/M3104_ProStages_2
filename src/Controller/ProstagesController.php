@@ -11,7 +11,7 @@ class ProstagesController extends AbstractController
     /**
      * @Route("/", name="prostages_accueil")
      */
-    public function index(): Response
+    public function affichageIndex(): Response
     {
         return $this->render('prostages/index.html.twig', [
             'controller_name' => 'ProstagesController',
@@ -21,7 +21,7 @@ class ProstagesController extends AbstractController
     /**
      * @Route("/entreprises", name="prostages_entreprises")
      */
-    public function directionEntreprises(): Response
+    public function affichageEntreprises(): Response
     {
         return $this->render('prostages/affichageEntreprises.html.twig', [
             'controller_name' => 'ProstagesController',
@@ -29,11 +29,11 @@ class ProstagesController extends AbstractController
     }
 
     /**
-     * @Route("/formation", name="prostages_formation")
+     * @Route("/formations", name="prostages_formations")
      */
-    public function directionFormation(): Response
+    public function affichageFormations(): Response
     {
-        return $this->render('prostages/affichageFormation.html.twig', [
+        return $this->render('prostages/affichageFormations.html.twig', [
             'controller_name' => 'ProstagesController',
         ]);
     }
@@ -41,7 +41,7 @@ class ProstagesController extends AbstractController
     /**
      * @Route("/stages/{id}", name="prostages_stages")
      */
-    public function directionStages($id): Response
+    public function affichageStages($id): Response
     {
         return $this->render('prostages/affichageStages.html.twig', [
             'controller_name' => 'ProstagesController',
