@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- meta tag obligatoires -->
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
+
+        <!-- Titre de la page -->
+        <title>
+            {% block title %}
+                Prostages
+            {% endblock %}
+        </title>
+
+        <!-- Feuilles de styles (CSS & JavaScript) -->
         {% block stylesheets %}
             {#{{ encore_entry_link_tags('app') }}#}
         {% endblock %}
@@ -14,6 +21,36 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <!-- En-tête avec le logo et le titre-->
+        {% block header %}
+        <h1><center>Prostages</center></h1>
+        {% endblock %}
+
+        <!-- Menu de navigation -->
+        {% block nav %}
+        <center>
+            <table>
+                <tr>
+                    <!-- Permettre de filtrer par entreprises -->
+                    <td>
+                        <a href="{{path('prostages_entreprises')}}"> Filtrer par entreprises </a>
+                    </td>
+
+                    <!-- Permettre de filtrer par formations -->
+                    <td>
+                        <a href="{{path('prostages_formations')}}"> Filtrer par formations </a>
+                    </td>
+                </tr>
+            </table>
+        </center>
+        {% endblock %}
+
+        <!-- Bloc contenu de la page-->
+        {% block contenuBody %}
+        {% endblock %}
+
+        <!-- Pied de page -->
+        {% block footer %}
+        {% endblock %}
     </body>
 </html>
