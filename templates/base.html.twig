@@ -55,9 +55,14 @@
         {% endblock %}
 
         <!-- Bloc contenu de la page-->
-        {% block contenuBody %}
-        {% endblock %}
-
+        <center>
+            <div class="container">
+                <div class="col-10">
+                    {% block contenuBody %}
+                    {% endblock %}
+                </div>
+            </div>
+        <center>
         <!-- Pied de page -->
         {% block footer %}
         {% endblock %}
