@@ -27,25 +27,30 @@
     <body>
         <!-- En-tête avec le logo et le titre-->
         {% block header %}
-        <h1><center>Prostages</center></h1>
+        <h1>
+            <center>
+                <a href="{{path('prostages_accueil')}}"> Prostages </a>
+            </center>
+        </h1>
         {% endblock %}
 
         <!-- Menu de navigation -->
         {% block nav %}
         <center>
-            <table>
-                <tr>
-                    <!-- Permettre de filtrer par entreprises -->
-                    <td>
+        <div class="container">
+            <div class ="col-10">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="col">
+                        <!-- Permettre de filtrer par entreprises -->
                         <a href="{{path('prostages_entreprises')}}"> Filtrer par entreprises </a>
-                    </td>
-
-                    <!-- Permettre de filtrer par formations -->
-                    <td>
+                    </div>
+                    <div class ="col">
+                        <!-- Permettre de filtrer par formations -->
                         <a href="{{path('prostages_formations')}}"> Filtrer par formations </a>
-                    </td>
-                </tr>
-            </table>
+                    </div> 
+                </nav>
+            </div>
+        </div>
         </center>
         {% endblock %}
 
