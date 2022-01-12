@@ -1,22 +1,22 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'dev-master',
-        'version' => 'dev-master',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'ca1f4911492ebe40f75348a86f5edfb59a3d6511',
+        'reference' => NULL,
         'name' => '__root__',
         'dev' => true,
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'ca1f4911492ebe40f75348a86f5edfb59a3d6511',
+            'reference' => NULL,
             'dev_requirement' => false,
         ),
         'composer/package-versions-deprecated' => array(
@@ -207,6 +207,15 @@
             'aliases' => array(),
             'reference' => '006aa5d32f887a4db4353b13b5b5095613e0611f',
             'dev_requirement' => false,
+        ),
+        'fzaninotto/faker' => array(
+            'pretty_version' => 'v1.5.0',
+            'version' => '1.5.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../fzaninotto/faker',
+            'aliases' => array(),
+            'reference' => 'd0190b156bcca848d401fb80f31f504f37141c8d',
+            'dev_requirement' => true,
         ),
         'laminas/laminas-code' => array(
             'pretty_version' => '4.4.3',
